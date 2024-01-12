@@ -1,0 +1,19 @@
+[package]
+name = "macro_test"
+version = "0.0.0"
+authors = ["leuti2 <tim.leuenberger@ypsomed.com>"]
+description = "A `cargo generate` template for quick-starting a procedural macro crate"
+keywords = ["template", "proc_macro", "procmacro"]
+edition = "2018"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+quote = "1"
+proc-macro2 = "1.0"
+syn = {version =  "2.0.39", features = ["full", "parsing", "derive"] }
+macro-test-traits = {path = "macro-test-traits"}
+serde = { version = "1.0.195", features = ["derive"] }
+serde_json = { version = "1.0.111", features = [] }
+
